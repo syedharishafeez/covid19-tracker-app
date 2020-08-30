@@ -35,7 +35,7 @@ jobs:
         run: CI=false yarn build
       
       - name: Install Surge
-        run: npm i surge
+        run: npm i -g surge
       
       - name: Deploy on Surge
         run: surge ./build haris-covid19-tracker-app.surge.sh --token ${{secrets.SURGE_TOKEN}}
